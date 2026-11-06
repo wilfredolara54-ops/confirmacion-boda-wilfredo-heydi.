@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#59602b">
+<title>Confirmación de asistencia | Wilfredo & Heydi</title>
+<style>
+:root{--olive:#59602b;--deep:#454b20;--sage:#8e9564;--paper:#fffef9;--ink:#343629;--line:#c7c9a8}
+*{box-sizing:border-box}
+html{min-height:100%;background:#59602b}
+body{
+  margin:0; min-height:100svh; padding:12px;
+  display:grid; place-items:center; color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(255,255,255,.16),transparent 34%),
+    radial-gradient(ellipse at 88% 92%,rgba(255,255,255,.12),transparent 36%),
+    linear-gradient(145deg,#4e5425,#777d48 52%,#4e5425);
+}
+.card{
+  position:relative; isolation:isolate; overflow:hidden;
+  width:min(100%,460px);
+  min-height:min(740px,calc(100svh - 24px));
+  padding:clamp(17px,3.1svh,27px) clamp(21px,6vw,30px) 18px;
+  display:flex; flex-direction:column; justify-content:center;
+  text-align:center; background:var(--paper);
+  border:1px solid rgba(255,255,255,.85);
+  outline:1px solid rgba(89,96,43,.35); outline-offset:-8px;
+  box-shadow:0 16px 48px rgba(24,27,10,.28);
+}
+.card:before,.card:after{
+  content:"";position:absolute;z-index:-1;width:175px;height:210px;
+  opacity:.20;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 35% 20%,var(--sage) 0 3px,transparent 4px),
+    radial-gradient(ellipse at 48% 34%,var(--sage) 0 3px,transparent 4px),
+    radial-gradient(ellipse at 60% 48%,var(--sage) 0 3px,transparent 4px),
+    radial-gradient(ellipse at 70% 62%,var(--sage) 0 3px,transparent 4px);
+}
+.card:before{top:0;left:0}
+.card:after{right:0;bottom:0;transform:rotate(180deg)}
+.leaf{
+ position:absolute;z-index:-1;width:150px;height:190px;color:var(--sage);
+ opacity:.65;pointer-events:none
+}
+.leaf.tl{top:-7px;left:-8px}
+.leaf.br{right:-8px;bottom:-7px;transform:rotate(180deg)}
+.monogram{margin:0;color:var(--olive);font-size:clamp(43px,10vw,58px);line-height:.98;letter-spacing:4px;font-weight:400}
+.names{margin:7px 0 0;color:var(--deep);font-size:14px;letter-spacing:2.7px;text-transform:uppercase}
+.date{margin:8px 0 13px;color:var(--sage);font:11px Arial,sans-serif;letter-spacing:2.5px}
+.rule{height:1px;width:72%;margin:0 auto 15px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+h1{margin:0 0 16px;color:var(--olive);font-size:clamp(17px,4.5vw,21px);font-weight:400;letter-spacing:1.1px;text-transform:uppercase}
+.greeting{margin:0 0 9px;color:var(--deep);font-size:18px;font-weight:bold}
+.message{max-width:355px;margin:0 auto 12px;font-size:clamp(15px,3.9vw,17px);line-height:1.43}
+.question{margin:0 auto 17px;color:var(--deep);font-size:clamp(16px,4vw,18px);line-height:1.3;font-style:italic}
+.actions{display:grid;gap:10px;width:min(100%,325px);margin:0 auto 17px}
+.choice{
+ display:flex;align-items:center;justify-content:center;min-height:48px;padding:9px 15px;
+ border:1.4px solid var(--olive);border-radius:5px;color:var(--deep);
+ background:transparent;text-decoration:none;font:600 16px Georgia,"Times New Roman",serif;
+ -webkit-tap-highlight-color:transparent
+}
+.choice.primary{color:#fff;background:var(--olive)}
+.choice:active{transform:scale(.99)}
+.heart{margin-right:9px;font-size:19px;line-height:1}
+.rule.bottom{margin-bottom:11px}
+.reminder-title{margin:0 0 5px;color:var(--olive);font:600 12px Arial,sans-serif;letter-spacing:2px}
+.reminder{max-width:340px;margin:0 auto;font-size:14px;line-height:1.35}
+.closing{margin:10px 0 0;color:var(--sage);font-size:12px;font-style:italic}
+@media(max-height:760px){
+ body{padding:7px}
+ .card{min-height:calc(100svh - 14px);padding:13px 20px 12px}
+ .monogram{font-size:43px}.names{font-size:12px}.date{margin:6px 0 9px}
+ .rule{margin-bottom:10px}h1{margin-bottom:11px}
+ .greeting{font-size:16px;margin-bottom:6px}
+ .message{font-size:15px;line-height:1.34;margin-bottom:8px}
+ .question{font-size:16px;margin-bottom:11px}
+ .actions{gap:8px;margin-bottom:11px}
+ .choice{min-height:43px;font-size:15px}
+ .rule.bottom{margin-bottom:8px}
+ .reminder-title{font-size:11px}.reminder{font-size:13px}
+ .closing{margin-top:7px;font-size:11px}
+ .leaf{width:120px;height:155px}
+}
+@media(max-width:360px){
+ body{padding:5px}.card{padding-left:17px;padding-right:17px}
+ .message{font-size:14px}.question{font-size:15px}
+}
+</style>
+</head>
+<body>
+<main class="card" aria-label="Tarjeta de confirmación de asistencia a la boda de Wilfredo y Heydi">
+<svg class="leaf tl" viewBox="0 0 160 200" fill="none" aria-hidden="true">
+ <path d="M5 190C35 150 52 88 112 8" stroke="currentColor" stroke-width="1.5"/>
+ <g fill="#8e9564" fill-opacity=".17" stroke="currentColor" stroke-width="1">
+ <path d="M28 158C5 153 1 134 7 123C26 126 37 140 28 158Z"/><path d="M44 132C23 116 28 97 39 90C56 105 57 119 44 132Z"/>
+ <path d="M61 104C43 83 51 66 64 60C77 78 76 92 61 104Z"/><path d="M80 75C70 53 83 37 97 38C105 58 98 69 80 75Z"/>
+ <path d="M25 172C45 151 64 154 71 165C55 181 39 183 25 172Z"/><path d="M57 119C77 99 95 105 100 117C84 132 69 132 57 119Z"/>
+ <path d="M91 55C108 35 126 42 130 54C115 68 100 68 91 55Z"/>
+ </g>
+</svg>
+<svg class="leaf br" viewBox="0 0 160 200" fill="none" aria-hidden="true">
+ <path d="M5 190C35 150 52 88 112 8" stroke="currentColor" stroke-width="1.5"/>
+ <g fill="#8e9564" fill-opacity=".17" stroke="currentColor" stroke-width="1">
+ <path d="M28 158C5 153 1 134 7 123C26 126 37 140 28 158Z"/><path d="M44 132C23 116 28 97 39 90C56 105 57 119 44 132Z"/>
+ <path d="M61 104C43 83 51 66 64 60C77 78 76 92 61 104Z"/><path d="M80 75C70 53 83 37 97 38C105 58 98 69 80 75Z"/>
+ <path d="M25 172C45 151 64 154 71 165C55 181 39 183 25 172Z"/><path d="M57 119C77 99 95 105 100 117C84 132 69 132 57 119Z"/>
+ <path d="M91 55C108 35 126 42 130 54C115 68 100 68 91 55Z"/>
+ </g>
+</svg>
+
+<header>
+ <div class="monogram">W <span style="font-size:.72em">|</span> H</div>
+ <p class="names">Wilfredo &amp; Heydi</p>
+ <p class="date">14 DE NOVIEMBRE DE 2026</p>
+</header>
+<div class="rule"></div>
+<h1>Confirmación de asistencia</h1>
+<p class="greeting">¡Hola, bendiciones!</p>
+<p class="message">Estamos organizando los últimos detalles de nuestra boda y agradeceríamos mucho que nos confirmara su asistencia.</p>
+<p class="question">¿Contaremos con el gusto de su presencia?</p>
+<nav class="actions" aria-label="Confirmar asistencia por WhatsApp">
+ <a class="choice primary" href="https://wa.me/50582148392?text=Hola%2C%20s%C3%AD%20asistir%C3%A9%20a%20su%20boda%20este%20s%C3%A1bado%2014%20de%20noviembre.%20%F0%9F%98%8A" target="_blank" rel="noopener"><span class="heart" aria-hidden="true">♡</span>Sí, Asistiré</a>
+ <a class="choice" href="https://wa.me/50582148392?text=Mil%20disculpas%2C%20no%20podr%C3%A9%20asistir%20a%20su%20boda.%20%F0%9F%98%94" target="_blank" rel="noopener"><span class="heart" aria-hidden="true">♡</span>No Podré Asistir</a>
+</nav>
+<div class="rule bottom"></div>
+<p class="reminder-title">RECORDATORIO</p>
+<p class="reminder">Les agradecemos evitar vestir de color blanco o verde olivo.</p>
+<p class="closing">Gracias por ser parte de este momento tan especial.</p>
+</main>
+</body>
+</html>
